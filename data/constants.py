@@ -10,3 +10,6 @@ FPS = 30
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 GREY = (57, 57, 57)
+
+# Grid
+CELL_SIZE = 10
