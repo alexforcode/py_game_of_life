@@ -4,7 +4,7 @@ SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 
 # Frame per second
-FPS = 30
+FPS = 10
 
 # Colors
 WHITE = (255, 255, 255)
