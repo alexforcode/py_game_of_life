@@ -39,6 +39,7 @@ class Cell(object):
         for neighbour in self._neighbours:
             if neighbour.alive:
                 count += 1
+
         return count
 
     def draw(self, screen):
@@ -55,8 +56,14 @@ class Grid(object):
         self._build_grid()
 
     def _neighbour_index(self, col, row):
-        if col < 0 or row < 0 or col > self._cols - 1 or row > self._rows - 1:
-            return
+        if col < 0:
+            col = self._cols - 1
+        elif col > self._cols - 1:
+            col = 0
+        if row < 0:
+            row = self._rows - 1
+        elif row > self._rows - 1:
+            row = 0
         return col + row * self._cols
 
     def _add_neighbours(self, cell):
